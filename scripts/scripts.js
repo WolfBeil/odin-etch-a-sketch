@@ -29,7 +29,7 @@ document.addEventListener("mouseup", () => {
     isMouseDown = false;
 })
 
-createGrid(64);
+createGrid(32);
 
 const container = document.querySelector(".main-container");
 
