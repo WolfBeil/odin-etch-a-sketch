@@ -12,7 +12,7 @@ function createGrid(squares) {
             col.appendChild(cell);
             cell.addEventListener("mouseover", () => {
                 if (isMouseDown) {
-                    cell.style.backgroundColor = "black";
+                    cell.style.backgroundColor = useRandomColor ? randRgb() : "black";
                 }
             })
         }
@@ -65,6 +65,17 @@ function randRgb() {
     return `rgb(${randRgbNum()},${randRgbNum()},${randRgbNum()})`;
 }
 
+let useRandomColor = false;
+
+const colorBtn = document.createElement("button");
+colorBtn.textContent = "Use random colors";
+colorBtn.classList = "colorBtn";
+colorBtn.addEventListener ("click", () => {
+    useRandomColor = !useRandomColor;
+    colorBtn.textContent = useRandomColor ? "Use black" : "Use random colors";
+});
+
 container.appendChild(input);
 container.appendChild(btn);
+container.appendChild(colorBtn);
 
