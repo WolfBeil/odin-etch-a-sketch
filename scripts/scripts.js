@@ -48,6 +48,8 @@ btn.addEventListener("click", () => {
         qt = 64;
     } else if (qt < 8) {
         qt = 8;
+    } else if (isNaN(qt)) {
+        qt = 32;
     };
     createGrid(qt);
 });
