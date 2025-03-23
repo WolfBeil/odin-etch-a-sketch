@@ -1,23 +1,31 @@
-const blocks = document.querySelectorAll(".second-cell").forEach(blocks => blocks.addEventListener("mouseover", () => fill(blocks)));
-
-
-function fill(block) {
-    block.style.backgroundColor = "black";
-}
-
 const grid = document.querySelector(".grid");
 
 function createGrid(squares) {
     for (let i = 0; i < squares; i++) {
-        const row = document.createElement("div");
-        row.classList = "row";
-        grid.appendChild(row);
+        const col = document.createElement("div");
+        col.classList = "col";
+        grid.appendChild(col);
         for (let j = 0; j < squares; j++) {
-            const col = document.createElement("div");
-            col.classList = "col";
-            row.appendChild(col);
+            const cell = document.createElement("div");
+            cell.classList = "cell";
+            col.appendChild(cell);
+            cell.addEventListener("mouseover", () => {
+                if (isMouseDown) {
+                    cell.style.backgroundColor = "black";
+                }
+            })
         }
     }
 }
 
-createGrid(5);
+let isMouseDown = false;
+
+document.addEventListener("mousedown", () => {
+    isMouseDown = true;
+})
+
+document.addEventListener("mouseup", () => {
+    isMouseDown = false;
+})
+
+createGrid(16);

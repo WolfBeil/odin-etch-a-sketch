@@ -1,14 +1,19 @@
 .grid {
     display: flex;
-    width: 450px;
-    height: 450px;
-    flex-wrap: wrap;
+    height: 400px;
+    width: 400px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .cell {
     flex: 1;
 }
 
-.grid, .cell {
+.grid, .col, .cell {
     border: 1px solid black;
 }
