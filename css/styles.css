@@ -14,6 +14,6 @@
     flex: 1;
 }
 
-.grid, .col, .cell {
+.grid {
     border: 1px solid black;
 }

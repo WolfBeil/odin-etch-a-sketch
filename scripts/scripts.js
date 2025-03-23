@@ -28,4 +28,4 @@ document.addEventListener("mouseup", () => {
     isMouseDown = false;
 })
 
-createGrid(16);
+createGrid(64);
