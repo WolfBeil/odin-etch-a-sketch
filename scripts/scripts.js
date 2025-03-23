@@ -34,13 +34,16 @@ createGrid(32);
 const container = document.querySelector(".main-container");
 
 const input = document.createElement('input');
+input.classList = "input";
 input.type = "number";
-input.placeholder = "Define grid size (8-64)";
+input.placeholder = "(8-64)";
 input.min = 8;
 input.max = 64;
+input.value = 32;
 
 const btn = document.createElement("button");
 btn.textContent = "Restart";
+btn.classList = "btn";
 
 btn.addEventListener("click", () => {
     let qt = parseInt((input.value));

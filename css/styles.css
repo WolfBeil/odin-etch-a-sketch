@@ -1,7 +1,25 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
 .grid {
     display: flex;
+    justify-self: center;
     height: 400px;
     width: 400px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 10px lightgray;
+}
+
+.input {
+    width: 3em;
 }
 
 .col {
