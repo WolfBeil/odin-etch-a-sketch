@@ -29,3 +29,21 @@ document.addEventListener("mouseup", () => {
 })
 
 createGrid(64);
+
+const container = document.querySelector(".main-container");
+
+const btn = document.createElement("button");
+btn.textContent = "Restart";
+btn.addEventListener("click", () => {
+    grid.textContent = "";
+    let qt = parseInt(prompt("How many rows and colums do you want? (min 8 - max 64)"));
+    if (qt > 64) {
+        qt = 64;
+    } else if (qt <= 8) {
+        qt = 8;
+    };
+    createGrid(qt);
+});
+
+container.appendChild(btn);
+
