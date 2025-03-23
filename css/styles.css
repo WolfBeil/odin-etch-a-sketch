@@ -11,10 +11,16 @@ body {
 
 .input {
     margin-bottom: 10px;
+    width: 4em;
 }
 
 .btn {
     margin-bottom: 10px;
+    width: 100px;
+}
+
+.colorBtn {
+    width: 150px;
 }
 
 .grid {
@@ -26,9 +32,6 @@ body {
     box-shadow: 0 0 10px 10px lightgray;
 }
 
-.input {
-    width: 3em;
-}
 
 .col {
     display: flex;
