@@ -57,6 +57,14 @@ btn.addEventListener("click", () => {
     createGrid(qt);
 });
 
+function randRgbNum() {
+    return Math.floor(Math.random() * 256);
+}
+
+function randRgb() {
+    return `rgb(${randRgbNum()},${randRgbNum()},${randRgbNum()})`;
+}
+
 container.appendChild(input);
 container.appendChild(btn);
 
